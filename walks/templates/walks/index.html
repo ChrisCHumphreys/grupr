@@ -1,7 +1,7 @@
 {% if walks %}                                                                         
   <ul>                                                                                 
     {% for walk in walks %}                                                            
-      <li><a href="/walks/{{ walk.slug }}/">{{ walk.name }}</a></li>                   
+      <li><a href="/walks/{{ walk.slug }}/detail/">{{ walk.name }}</a></li>                   
     {% endfor %}                                                                       
   </ul>                                                                                
 {% else %}                                                                             

@@ -1,0 +1,12 @@
+<div>
+  <div class="containter-fluid">
+    <form
+       action="{% url 'create' %}"
+       method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">
+      Create Walk</button>
+    </form>
+  </div>
+</div>

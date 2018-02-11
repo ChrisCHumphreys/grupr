@@ -2,7 +2,7 @@ from django import forms
 from django.forms import ModelForm, SlugField
 from django.core.exceptions import ValidationError
 from django.utils.text import slugify
-from .models import Walk
+from .models import Walk, People
 
 class WalkForm(forms.ModelForm):
     
@@ -15,3 +15,9 @@ class WalkForm(forms.ModelForm):
             self.cleaned_data['name']
             )
         return slugify(new_slug)
+
+class PeopleForm(forms.ModelForm):
+
+    class Meta:
+        model = People
+        fields = '__all__'

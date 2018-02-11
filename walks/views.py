@@ -43,6 +43,11 @@ def people_list(request):
     people = People.objects.all()
     context = {'people': people}
     return render(request, 'walks/people_list.html', context)
+
+def people_detail(request, slug):
+    person = get_object_or_404(People, slug=slug)
+    return render(request, 'walks/person_detail.html', {'person':person})
+
 '''
 def create_walk(request):
     return HttpResponse("Create is live")

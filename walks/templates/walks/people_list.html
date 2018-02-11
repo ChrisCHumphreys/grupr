@@ -1,7 +1,7 @@
 {% if people %}
   <ul>
     {% for person in people %}
-      <li><a href="/walks/people/{{ person.slug }}/detail/">
+      <li><a href="/walks/people/{{ person.slug }}/">
 	   {{ person.first_name }} {{ person.last_name }}</a></li>
     {% endfor %}
   </ul>

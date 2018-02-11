@@ -1,0 +1,9 @@
+{% if walks %}                                                                         
+  <ul>                                                                                 
+    {% for walk in walks %}                                                            
+      <li><a href="/walks/{{ walk.slug }}/">{{ walk.name }}</a></li>                   
+    {% endfor %}                                                                       
+  </ul>                                                                                
+{% else %}                                                                             
+  <p>No Walks are available</p>                                                        
+{% endif %}                                                                              
